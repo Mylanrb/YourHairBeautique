@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Template</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!--Website icon-->
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <!-- changed -->
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img id="minilogo" src="images/logo.png" alt="Logo" />
+        </a>
+        <a class="name" href="index.html">
+          <p>Your Hair Beautique</p>
+        </a>
+      </div>
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#portfolio-preview">Portfolio</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="contact.html" class="contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="sidebar" id="sidebar">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
+          <li>
+            <a href="#portfolio-preview" onclick="closeSidebar()">Portfolio</a>
+          </li>
+          <li><a href="#prices" onclick="closeSidebar()">Prices</a></li>
+          <li>
+            <a href="contact.html" class="contact" onclick="closeSidebar()"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <section id="front-page">
+      <!-- Front page content goes here -->
+      <div class="container">
+        <img src="images/yhblnr.png" alt="Logo" class="blogo" />
+        <!-- changed -->
+        <a href="contact.html" class="appointment-button"
+          >MAKE AN APPOINTMENT</a
+        >
+      </div>
+    </section>
+    <section id="portfolio-preview">
+      <!-- Portfolio preview content goes here -->
+      <button onclick="location.href='portfolio.html'">
+        View Full Portfolio
+      </button>
+    </section>
+    <section id="prices">
+      <!-- Prices content goes here -->
+    </section>
+    <section id="contact-preview">
+      <div class="profile-picture">
+        <!-- Profile picture goes here -->
+      </div>
+      <div class="contact-text">
+        <!-- Contact text goes here -->
+        <button onclick="location.href='contact.html'">Get in Touch</button>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <p class="footer-text">@YourHairBeautique</p>
+        <div class="footer-icons">
+          <a
+            href="https://www.instagram.com/yourhairbeautique_/"
+            target="_blank"
+            class="footer-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.whatsapp.com" target="_blank" class="footer-icon"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="mailto:yourhairbeautique@example.com" class="footer-icon"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      }
+
+      function closeSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
