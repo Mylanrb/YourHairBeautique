@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Template</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!--Website icon-->
+    <link rel="icon" href="images/yhblbk1.png" type="image/png" />
+    <!-- changed -->
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img id="minilogo" src="images/yhblbk1.png" alt="Logo" />
+        </a>
+        <a class="name" href="index.html">
+          <p>Your Hair Beautique</p>
+        </a>
+      </div>
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#portfolio-preview">Diensten</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="contact.html" class="contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="sidebar" id="sidebar">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
+          <li>
+            <a href="#portfolio-preview" onclick="closeSidebar()">Portfolio</a>
+          </li>
+          <li><a href="#prices" onclick="closeSidebar()">Prices</a></li>
+          <li>
+            <a href="contact.html" class="contact" onclick="closeSidebar()"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <section id="front-page">
+      <!-- Front page content goes here -->
+      <div class="container">
+        <img src="images/yhblnr.png" alt="Logo" class="blogo" />
+        <!-- changed -->
+        <a href="contact.html" class="appointment-button"
+          >MAKE AN APPOINTMENT</a
+        >
+      </div>
+    </section>
+    <section id="diensten" class="diensten-section">
+      <h2>Services</h2>
+      <!-- Header at the top -->
+      <div class="diensten-cards">
+        <div class="card">
+          <img src="images/s1.jpg" alt="Service 1" class="card-img" />
+          <h3>Cuts</h3>
+          <p>
+            Knipservice: consultatie en kwaliteitsproducten voor een frisse
+            look. Klassiek of trendy, wij zorgen ervoor dat je tevreden bent.
+          </p>
+          <a href="portfolio.html" class="appointment-button"
+            >More Information</a
+          >
+        </div>
+        <div class="card">
+          <img src="images/s2.jpg" alt="Service 2" class="card-img" />
+          <h3>Colors</h3>
+          <p>
+            Kleurservice: uitgebreide mogelijkheden, kwalitatieve producten.
+            Subtiele highlights tot volledige transformaties, afgestemd op jouw
+            wensen.
+          </p>
+          <a href="portfolio.html" class="appointment-button"
+            >More Information</a
+          >
+        </div>
+        <div class="card">
+          <img src="images/s3.jpg" alt="Service 3" class="card-img" />
+          <h3>Curls</h3>
+          <p>
+            Stylingservice: perfect voor speciale gelegenheden. Föhnen, updos en
+            meer, met aandacht voor detail en jouw persoonlijke stijl.
+          </p>
+          <a href="portfolio.html" class="appointment-button"
+            >More Information</a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="small-section"></section>
+    <section id="references" class="small-section">
+      <h2>References</h2>
+      <!-- Header positioned above the slider -->
+      <div class="slider">
+        <div class="slider-container">
+          <div class="reference">
+            <div class="line"></div>
+            <p class="message">
+              "This is an amazing service! Highly recommend to everyone."
+            </p>
+            <p class="rname">- John Doe</p>
+            <div class="stars">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="reference">
+            <div class="line"></div>
+            <p class="message">
+              "Outstanding experience! Will definitely use this again."
+            </p>
+            <p class="rname">- Jane Smith</p>
+            <div class="stars">
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star filled">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="line"></div>
+          </div>
+          <!-- Additional references can be added here -->
+        </div>
+        <div class="arrows">
+          <span class="arrow left">◀</span>
+          <span class="arrow right">▶</span>
+        </div>
+      </div>
+    </section>
+    <section id="contact-preview" class="small-section">
+      <div class="contact-text">
+        <button onclick="location.href='contact.html'">Get in Touch</button>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <p class="footer-text">@YourHairBeautique</p>
+        <div class="footer-icons">
+          <a
+            href="https://www.instagram.com/yourhairbeautique_/"
+            target="_blank"
+            class="footer-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.whatsapp.com" target="_blank" class="footer-icon"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="mailto:yourhairbeautique@example.com" class="footer-icon"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      }
+
+      function closeSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      }
+
+      const sliderContainer = document.querySelector(".slider-container");
+      const slides = document.querySelectorAll(".reference");
+      const arrowLeft = document.querySelector(".arrow.left");
+      const arrowRight = document.querySelector(".arrow.right");
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const width = slides[0].clientWidth;
+        sliderContainer.style.transform = `translateX(${-width * index}px)`;
+      }
+
+      arrowRight.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      arrowLeft.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, 5000);
+    </script>
+  </body>
+</html>

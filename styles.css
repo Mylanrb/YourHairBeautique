@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.name {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #ff9d9e;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.desktop-nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav.desktop-nav ul li {
+  margin-left: 20px;
+}
+
+nav.desktop-nav ul li a {
+  color: #555553;
+  text-decoration: none;
+}
+
+nav.desktop-nav ul li a.contact {
+  background-color: #ff9d9e;
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+nav.desktop-nav ul li a.contact:hover {
+  color: white;
+}
+
+nav.desktop-nav ul li a:hover {
+  color: black;
+}
+
+#minilogo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#front-page {
+  align-items: flex-end; /* Align items to the bottom */
+  display: flex;
+  justify-content: center;
+  background-image: url(images/bk.jpg);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px; /* Add margin to position button slightly above the bottom */
+
+  flex-direction: column; /* changed */
+  align-items: center; /* changed */
+  justify-content: flex-end; /* changed */
+}
+
+.blogo {
+  /* changed */
+  width: 27%;
+  max-width: 80%;
+  height: auto;
+}
+
+.appointment-button {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ff9d9e;
+  font-weight: 600;
+  border: 2px solid #ff9d9e;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.appointment-button:hover {
+  background-color: #ff9d9e;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* Adjust padding to account for fixed header */
+  background-color: #e3ded8;
+}
+
+.small-section {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* Adjust padding to account for fixed header */
+  background-color: #e3ded8;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+#portfolio-preview {
+  flex-direction: column;
+  background-color: #ff9d9e;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.active {
+  max-height: 500px; /* Set to a large enough value to accommodate the content */
+}
+
+nav.mobile-nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 30px 0;
+}
+
+nav.mobile-nav ul li {
+  margin: 10px 0;
+}
+
+nav.mobile-nav ul li a {
+  color: #555553;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav.mobile-nav ul li a.contact {
+  background-color: #ff9d9e;
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+nav.mobile-nav ul li a:hover {
+  color: black;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  padding: 35px 30px;
+  background-color: #222222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-text {
+  color: #555553;
+  font-size: 16px;
+}
+
+.footer-text:hover {
+  color: white;
+  font-size: 16px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon {
+  color: #555553;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  color: white;
+}
+
+/* */
+
+.diensten-section {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center-align content */
+  min-height: 1000px;
+}
+
+.diensten-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  width: 100%;
+}
+
+.diensten-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px; /* Space between cards */
+  width: 100%;
+  max-width: 1200px; /* Optional: Limit the max width of the card container */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width of container */
+  max-width: 350px; /* Set a max width for the cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.appointment-button {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ff9d9e;
+  font-weight: 600;
+  border: 2px solid #ff9d9e;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.appointment-button:hover {
+  background-color: #ff9d9e;
+  color: #fff;
+}
+
+#references {
+  padding: 60px 30px; /* Increased padding for more space */
+  background-color: transparent; /* Remove background color to blend with the page */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Header and slider in a column */
+  align-items: center;
+}
+
+#references h2 {
+  font-size: 36px; /* Increased font size */
+  margin-bottom: 40px; /* Increased margin for more space */
+  color: #333;
+}
+
+.slider {
+  position: relative;
+  max-width: 1200px; /* Increased max width for more space */
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.reference {
+  min-width: 100%;
+  padding: 30px 0; /* Adjusted padding to remove box effect */
+  box-sizing: border-box;
+}
+
+.line {
+  width: 50%; /* Increased width */
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 30px auto; /* Increased margin for more space */
+}
+
+.message {
+  font-size: 20px; /* Increased font size */
+  color: #555;
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.rname {
+  font-size: 18px; /* Increased font size */
+  color: #777;
+  margin-bottom: 60px; /* Increased margin */
+}
+
+.stars {
+  font-size: 28px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.stars .star.filled {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 50px; /* Increased padding to move arrows further from the center */
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 26px; /* Increased font size */
+  color: rgba(0, 0, 0, 0.3);
+  user-select: none;
+  padding: 0 20px;
+}
+
+.arrow:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .reference {
+    padding: 0; /* Increased padding for mobile */
+  }
+
+  .message {
+    margin-bottom: 30px; /* Increased margin for mobile */
+  }
+
+  .name {
+    margin-bottom: 35px; /* Increased margin for mobile */
+    font-size: 16px;
+  }
+
+  .line {
+    margin: 30px auto; /* Increased margin for mobile */
+    width: 65%;
+  }
+
+  .arrows {
+    padding: 0; /* Adjusted padding for mobile */
+  }
+
+  .arrow.left {
+    padding: 0 40px 0 0;
+  }
+
+  .arrow.right {
+    padding: 0 0 0 40px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 8px;
+  }
+
+  nav.desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin: 0;
+    display: flex;
+  }
+
+  .blogo {
+    /* changed */
+    width: 80%;
+    max-width: none;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .container {
+    margin-bottom: 235px;
+  }
+
+  .diensten-section {
+    height: auto;
+  }
+
+  .diensten-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
